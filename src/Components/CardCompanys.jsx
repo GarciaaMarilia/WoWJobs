@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import RoomIcon from '@material-ui/icons/Room';
 import { IconButton } from '@material-ui/core';
+import Logo from '../Images/logo.jpg';
 
 
 function CardCompanys(props) {
@@ -16,8 +17,8 @@ function CardCompanys(props) {
             <Card sx={{ minWidth: 275 }}>
                 <CardMedia
                     component="img"
-                    height="100"
-                    image={require('../Images/logo.jpg')}
+                    height="300"
+                    image={Logo}
                     alt="company logo"
                 />
                 <CardContent sx={{ padding: '10px', alignItems: 'center' }}>
@@ -35,8 +36,8 @@ function CardCompanys(props) {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button size="small" >Sobre</Button>
-                    <Button size="small" >Compartilhar</Button>
+                    <Button size="small">Sobre</Button>
+                    <Button size="small">Compartilhar</Button>
                 </CardActions>
             </Card>
         </React.Fragment>

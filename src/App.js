@@ -8,6 +8,7 @@ import Status from './Components/Status'
 import { Container } from '@material-ui/core';
 import Space from '././Style/space'
 import Companys from "./Pages/Companys.jsx";
+import DetailsCompany from "./Components/DetailsCompany";
 
 
 function App() {

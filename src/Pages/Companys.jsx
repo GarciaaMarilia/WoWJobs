@@ -3,6 +3,8 @@ import Slider from "react-slick";
 import Typography from '@mui/material/Typography';
 import CardCompany from '../Components/CardCompanys';
 import Space from '../Style/space';
+import DetailsCompany from '../Components/DetailsCompany';
+
 
 function Companys(props) {
     const settings = {
@@ -15,7 +17,7 @@ function Companys(props) {
     return (
         <Slider {...settings}>
             <React.Fragment>
-                <Typography variant="h5" component="div" align="center">
+                <Typography variant="h5" component="div" align="center" color='#000080' fontFamily='Oswald' fontSize='80px'>
                     Empresas Parceiras
                 </Typography>
                 <Space size={40} />
