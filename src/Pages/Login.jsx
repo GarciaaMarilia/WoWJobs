@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { TextField, Button, Switch, FormControlLabel, Typography } from '@material-ui/core';
 import Stack from '@mui/material/Stack';
+import Space from "../Style/space";
 
 
 function FormularioLogin() {
@@ -10,7 +11,13 @@ function FormularioLogin() {
 
     return (
         <form>
-            <Typography variant="h5" component="div" align="center">
+            <Typography
+                variant="h5"
+                align="center"
+                fontFamily='Oswald'
+                fontSize='40px'
+                color='#363636'
+            >
                 Login
             </Typography>
             <TextField
@@ -39,11 +46,12 @@ function FormularioLogin() {
                 margin="normal"
                 fullWidth
             />
+            <Space size={20} />
             <Stack direction="row" spacing={2}>
                 <Button
                     type="button"
                     variant="contained"
-                    style={{ backgroundColor: "#000080" }}
+                    style={{ backgroundColor: "#104E8B" }}
                 //onClick={onSubmit}
                 >
                     Entrar
@@ -52,7 +60,7 @@ function FormularioLogin() {
                 <Button
                     type="button"
                     variant="contained"
-                    style={{ backgroundColor: "#000080" }}
+                    style={{ backgroundColor: "#104E8B" }}
                 //onClick={onSubmit}
                 >
                     Cadastre-se
@@ -67,7 +75,7 @@ function FormularioLogin() {
                                 setRemember(event.target.checked);
                             }}
                             name="remember"
-                            style={{ color: "#000080" }}
+                            style={{ color: "#104E8B" }}
                         />
                     }
                 />

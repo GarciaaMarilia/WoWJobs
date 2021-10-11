@@ -3,7 +3,6 @@ import Slider from "react-slick";
 import Typography from '@mui/material/Typography';
 import CardCompany from '../Components/CardCompanys';
 import Space from '../Style/space';
-import DetailsCompany from '../Components/DetailsCompany';
 
 
 function Companys(props) {
@@ -15,20 +14,24 @@ function Companys(props) {
         slidesToScroll: 1
     };
     return (
-        <Slider {...settings}>
-            <React.Fragment>
-                <Typography variant="h5" component="div" align="center" color='#000080' fontFamily='Oswald' fontSize='80px'>
-                    Empresas Parceiras
-                </Typography>
-                <Space size={40} />
-                <CardCompany name={"Nome da Empresa"} area={"Área de atuação"} location={"Localização"} />
-                <Space size={40} />
-                <CardCompany name={"Nome da Empresa"} area={"Área de atuação"} location={"Localização"} />
-                <Space size={40} />
-                <CardCompany name={"Nome da Empresa"} area={"Área de atuação"} location={"Localização"} />
-                <Space size={40} />
-            </React.Fragment>
-        </Slider>
+        <React.Fragment>
+            <Typography
+                variant="h5"
+                align="center"
+                fontFamily='Oswald'
+                fontSize='40px'
+                color='#363636'
+            >
+                Empresas Parceiras
+            </Typography>
+            <Space size={60} />
+            <CardCompany name={"Nome da Empresa"} area={"Área de atuação"} location={"Localização"} />
+            <Space size={40} />
+            <CardCompany name={"Nome da Empresa"} area={"Área de atuação"} location={"Localização"} />
+            <Space size={40} />
+            <CardCompany name={"Nome da Empresa"} area={"Área de atuação"} location={"Localização"} />
+            <Space size={40} />
+        </React.Fragment>
     );
 }
 

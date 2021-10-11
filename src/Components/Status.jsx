@@ -16,7 +16,7 @@ function Status() {
 
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="absolute" style={{ backgroundColor: "#000080" }}>
+            <AppBar position="absolute" style={{ backgroundColor: "#104E8B" }}>
                 <Toolbar>
                     <IconButton
                         size="large"

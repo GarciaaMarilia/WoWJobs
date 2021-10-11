@@ -11,12 +11,16 @@ function Registration() {
 
     return (
         <form>
-                <Typography
-                    variant="h4" component="div"
-                    sx={{ flexGrow: 1 }}
-                    align="center">
-                    Registre-se
-                </Typography>
+            <Typography
+                variant="h4" 
+                sx={{ flexGrow: 1 }}
+                align="center"
+                fontFamily='Oswald'
+                color='#363636'
+                fontSize='40px'
+                >
+                Registre-se
+            </Typography>
             <TextField
                 value={username}
                 onChange={(event) => {
@@ -88,22 +92,22 @@ function Registration() {
                 margin="normal">
                 <FormLabel
                     component="legend"
-                    style={{ color: "#000080" }}>
+                >
                     Gênero
                 </FormLabel>
                 <RadioGroup
-                    row = "row"
+                    row="row"
                     arial-label="Gênero"
-                    color="primary">
+                    color="#104E8B">
                     <FormControlLabel value={gender}
                         onChange={(event) => {
                             setGender(event.target.value);
                         }}
                         value="female"
                         name="Feminino"
-                        control={<Radio style={{ color: "#000080" }}/>}
+                        control={<Radio style={{ color: "#104E8B" }} />}
                         label="Feminino"
-                        color="primary"
+
                     />
                     <FormControlLabel value={gender}
                         onChange={(event) => {
@@ -111,7 +115,7 @@ function Registration() {
                         }}
                         value="male"
                         name="Masculino"
-                        control={<Radio style={{ color: "#000080" }}/>}
+                        control={<Radio style={{ color: "#104E8B" }} />}
                         label="Masculino"
                         color="primary"
                     />
@@ -121,7 +125,7 @@ function Registration() {
                         }}
                         value="other"
                         name="Outro"
-                        control={<Radio  style={{ color: "#000080" }}/>}
+                        control={<Radio style={{ color: "#104E8B" }} />}
                         label="Outro"
                     />
                 </RadioGroup>
@@ -130,9 +134,9 @@ function Registration() {
             <Button
                 type="button"
                 variant="contained"
-                style={{ backgroundColor: "#000080" }}
+                style={{ backgroundColor: "#104E8B" }}
                 fullWidth
-                >
+            >
                 Registrar Cadastro
             </Button>
 

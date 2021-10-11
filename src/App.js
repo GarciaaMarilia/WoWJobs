@@ -12,7 +12,7 @@ import DetailsCompany from "./Components/DetailsCompany";
 
 
 function App() {
-    const[etapaAtual, setEtapaAtual] = useState(4);
+    const[etapaAtual, setEtapaAtual] = useState(1);
 
     const pages = [
         <Login send={next}/>,

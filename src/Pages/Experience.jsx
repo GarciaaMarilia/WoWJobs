@@ -4,6 +4,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import Space from '../Style/space';
 
 
 function Experience() {
@@ -50,11 +51,15 @@ function Experience() {
                 '& .MuiTextField-root': { m: 1, width: '25ch' },
             }}>
                 <Typography
-                    variant="h4" component="div"
-                    sx={{ flexGrow: 1 }}
-                    align="center">
+                    variant="h5"
+                    align="center"
+                    fontFamily='Oswald'
+                    fontSize='40px'
+                    color='#363636'
+                >
                     Experiências anteriores
                 </Typography>
+                <Space size={40} />
                 <div align="center">
                     <TextField
                         id="EmpresaAtuacao"
@@ -96,12 +101,12 @@ function Experience() {
                         variant="outlined"
                         margin="normal"
                     />
-                    </div>
-                    <div align="center">
+                </div>
+                <div align="center">
                     <Button
                         type="button"
                         variant="contained"
-                        style={{ backgroundColor: "#000080" }}
+                        style={{ backgroundColor: "#104E8B" }}
                         size="medium"
                     >
                         Registrar Experiência
