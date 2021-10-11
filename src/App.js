@@ -8,18 +8,17 @@ import Status from './Components/Status'
 import { Container } from '@material-ui/core';
 import Space from '././Style/space'
 import Companys from "./Pages/Companys.jsx";
-import DetailsCompany from "./Components/DetailsCompany";
 
 
 function App() {
-    const[etapaAtual, setEtapaAtual] = useState(1);
+    const [etapaAtual, setEtapaAtual] = useState(4);
 
     const pages = [
-        <Login send={next}/>,
-        <Registration send={next}/>,
-        <Experience send={next}/>,
-        <Vagas send={next}/>,
-        <Companys send={send}/>
+        <Login send={next} />,
+        <Registration send={next} />,
+        <Experience send={next} />,
+        <Vagas send={next} />,
+        <Companys send={send} />
     ];
 
     function next() {
@@ -30,11 +29,11 @@ function App() {
     }
     return (
         <React.Fragment>
-        <Status />,
-        <Space size={80}/>
-        <Container>
-            {pages[etapaAtual]}
-        </Container>
+            <Status />,
+            <Space size={80} />
+            <Container>
+                {pages[etapaAtual]}
+            </Container>
         </React.Fragment>
     )
 }

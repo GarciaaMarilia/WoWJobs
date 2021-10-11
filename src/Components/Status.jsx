@@ -16,7 +16,12 @@ function Status() {
 
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="absolute" style={{ backgroundColor: "#104E8B" }}>
+            <AppBar
+                position="absolute"
+                style={{
+                    backgroundColor: "#104E8B"
+                }}
+            >
                 <Toolbar>
                     <IconButton
                         size="large"
@@ -27,7 +32,10 @@ function Status() {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                    <Typography
+                        variant="h6"
+                        sx={{ flexGrow: 1 }}
+                    >
                         WoWJobs
                     </Typography>
                     <IconButton

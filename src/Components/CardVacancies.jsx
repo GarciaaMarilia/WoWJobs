@@ -14,17 +14,27 @@ function CardVacancy(props) {
     return (
         <React.Fragment>
             <Card sx={{ minWidth: 275 }}>
-                <CardContent sx={{ padding: '20px', alignItems: 'center' }}>
-                    <Typography variant="h5" component="div">
+                <CardContent sx={{
+                    padding: '20px',
+                    alignItems: 'center'
+                }}
+                >
+                    <Typography variant="h5">
                         {props.title}
                     </Typography>
-                    <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                    <Typography
+                        sx={{ mb: 1.5 }}
+                        color="text.secondary"
+                    >
                         {props.format}
                     </Typography>
-                    <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                    <Typography
+                        sx={{ mb: 1.5 }}
+                        color="text.secondary"
+                    >
                         {props.company}
                     </Typography>
-                    <Typography variant="body2">
+                    <Typography>
                         {props.tecnology}
                     </Typography>
                 </CardContent>
