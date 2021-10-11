@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Space from '../Style/space';
+import Stack from '@mui/material/Stack';
 
 
 function Experience() {
@@ -46,74 +47,71 @@ function Experience() {
 
 
     return (
-        <React.Fragment>
-            <Box sx={{
-                '& .MuiTextField-root': { m: 1, width: '25ch' },
-            }}>
-                <Typography
-                    variant="h5"
-                    align="center"
-                    fontFamily='Oswald'
-                    fontSize='40px'
-                    color='#363636'
+        <form>
+            <Typography
+                variant="h5"
+                align="center"
+                fontFamily='Oswald'
+                fontSize='40px'
+                color='#363636'
+            >
+                Experiências anteriores
+            </Typography>
+            <Space size={40} />
+            <Stack
+                direction="row"
+                spacing={1}
+            >
+                <TextField
+                    label="Empresa"
+                    id="empresa"
+                    sx={{ minWidth: '40%' }}
+                />
+                <TextField
+                    id="TempoAtuacao"
+                    label="Tempo de atuação (Anos)"
+                    type="number"
+                    sx={{ minWidth: '20%' }}
+                />
+                <TextField
+                    id="AreaAtuacao"
+                    label="Área de atuação"
+                    select
+                    value={area}
+                    onChange={areaChange}
+                    sx={{ minWidth: '20%' }}
                 >
-                    Experiências anteriores
-                </Typography>
-                <Space size={40} />
-                <div align="center">
-                    <TextField
-                        id="EmpresaAtuacao"
-                        label="Empresa"
-                        type="text"
-                        variant="standard"
-                        margin="normal"
-                    />
-                    <TextField
-                        id="TempoAtuacao"
-                        label="Tempo de atuação (Anos)"
-                        type="number"
-                        variant="standard"
-                        margin="normal"
-                    />
-                    <TextField
-                        id="AreaAtuacao"
-                        select
-                        label="Área de atuação"
-                        value={area}
-                        onChange={areaChange}
-                        variant="standard"
-                    >
-                        {areas.map((option) => (
-                            <MenuItem
-                                key={option.value}
-                                value={option.value}>
-                                {option.label}
-                            </MenuItem>
-                        ))}
-                    </TextField>
-                </div>
-                <div align="center">
-                    <TextField
-                        id="DetalhesAtuacao"
-                        label="Fale um pouco mais sobre essa experiência"
-                        multiline
-                        rows={10}
-                        variant="outlined"
-                        margin="normal"
-                    />
-                </div>
-                <div align="center">
-                    <Button
-                        type="button"
-                        variant="contained"
-                        style={{ backgroundColor: "#104E8B" }}
-                        size="medium"
-                    >
-                        Registrar Experiência
-                    </Button>
-                </div>
-            </Box>
-        </React.Fragment>
+                    {areas.map((option) => (
+                        <MenuItem
+                            key={option.value}
+                            value={option.value}>
+                            {option.label}
+                        </MenuItem>
+                    ))}
+                </TextField>
+            </Stack>
+            <Space size={10} />
+            <Stack
+                direction="row"
+            >
+                <TextField
+                    fullWidth
+                    label="Descrição"
+                    id="descricao"
+                    sx={{ maxWidth: '80%' }}
+                />
+            </Stack>
+            <Space size={20} />
+            <Button
+                type="button"
+                variant="contained"
+                style={{ backgroundColor: "#104E8B" }}
+                size="small"
+            >
+                Registrar Experiência
+            </Button>
+
+        </form >
     );
 }
 

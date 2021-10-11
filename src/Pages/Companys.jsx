@@ -20,7 +20,8 @@ function Companys(props) {
             <Space size={60} />
             <Stack
                 direction="row"
-                spacing={20}>
+                spacing={20}
+            >
                 <CardCompany
                     name={"Nome da Empresa"}
                     area={"Área de atuação"}

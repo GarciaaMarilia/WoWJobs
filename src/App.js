@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Login from './Pages/Login';
 import Registration from './Pages/Registration';
 import Experience from './Pages/Experience';
-import Vagas from './Pages/JobVacancies';
+import Vacancies from './Pages/JobVacancies';
 import './App.css';
 import Status from './Components/Status'
 import { Container } from '@material-ui/core';
@@ -11,13 +11,13 @@ import Companys from "./Pages/Companys.jsx";
 
 
 function App() {
-    const [etapaAtual, setEtapaAtual] = useState(4);
+    const [etapaAtual, setEtapaAtual] = useState(2);
 
     const pages = [
         <Login send={next} />,
         <Registration send={next} />,
         <Experience send={next} />,
-        <Vagas send={next} />,
+        <Vacancies send={next} />,
         <Companys send={send} />
     ];
 
