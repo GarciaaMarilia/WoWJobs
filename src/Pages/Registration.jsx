@@ -12,13 +12,13 @@ function Registration() {
     return (
         <form>
             <Typography
-                variant="h4" 
+                variant="h4"
                 sx={{ flexGrow: 1 }}
                 align="center"
                 fontFamily='Oswald'
                 color='#363636'
                 fontSize='40px'
-                >
+            >
                 Registre-se
             </Typography>
             <TextField
@@ -99,31 +99,31 @@ function Registration() {
                     row="row"
                     arial-label="Gênero"
                     color="#104E8B">
-                    <FormControlLabel value={gender}
+                    <FormControlLabel
                         onChange={(event) => {
                             setGender(event.target.value);
                         }}
-                        value="female"
+                        value={gender}
                         name="Feminino"
                         control={<Radio style={{ color: "#104E8B" }} />}
                         label="Feminino"
 
                     />
-                    <FormControlLabel value={gender}
+                    <FormControlLabel
                         onChange={(event) => {
                             setGender(event.target.value);
                         }}
                         value="male"
-                        name="Masculino"
+                        name={gender}
                         control={<Radio style={{ color: "#104E8B" }} />}
                         label="Masculino"
                         color="primary"
                     />
-                    <FormControlLabel value={gender}
+                    <FormControlLabel
                         onChange={(event) => {
                             setGender(event.target.value);
                         }}
-                        value="other"
+                        value={gender}
                         name="Outro"
                         control={<Radio style={{ color: "#104E8B" }} />}
                         label="Outro"
