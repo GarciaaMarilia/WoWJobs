@@ -1,44 +1,41 @@
-import React, { useState } from "react";
+import React from "react";
 
-import { Container } from '@material-ui/core';
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+} from 'react-router-dom';
 
 import Status from './Components/Status'
-import Space from '././Style/space'
 import './App.css';
 
 import Registration from './Screens/Registration';
-import Vacancies from './Screens/JobVacancies';
+import Vacancies from './Screens/Vacancies';
 import Experience from './Screens/Experience';
 import Companys from "./Screens/Companys";
+import Profile from './Screens/Profile';
 import Login from './Screens/Login';
 
 export default function App() {
 
-    const [etapaAtual, setEtapaAtual] = useState(0);
-
-    const pages = [
-        <Login send={next} />,
-        <Registration send={next} />,
-        <Experience send={next} />,
-        <Vacancies send={next} />,
-        <Companys send={send} />
-    ];
-
-    function next() {
-        setEtapaAtual(etapaAtual + 1);
-    }
-
-    function send(dados) {
-        console.log(dados)
-    }
-
     return (
-        <React.Fragment>
-            <Status />,
-            <Space size={80} />
-            <Container>
-                {pages[etapaAtual]}
-            </Container>
-        </React.Fragment>
+        <>
+            <Status />
+            <Router>
+                <Routes>
+                    <Route exact path='/' element={<Login />} />
+
+                    <Route path='/Registration' element={<Registration />} />
+
+                    <Route path='/Experience' element={<Experience />} />
+
+                    <Route path='/Companys' element={<Companys />} />
+
+                    <Route path='/Vacancies' element={<Vacancies />} />
+
+                    <Route path='/Profile' element={<Profile />} />
+                </Routes>
+            </Router>
+        </>
     )
 }

@@ -5,7 +5,7 @@ import { TextField } from '@material-ui/core';
 import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
-
+import Box from '@mui/material/Box';
 
 import Space from '../Style/space';
 
@@ -49,84 +49,87 @@ function Experience() {
 
     return (
         <form>
+            <Box style={{ margin: 40 }}>
 
-            <Typography
-                variant="h5"
-                align="center"
-                fontFamily='Oswald'
-                fontSize='40px'
-                color='#363636'
-            >
-                Experiências anteriores
-            </Typography>
+                <Space size={60} />
 
-            <Space size={60} />
-
-            <Stack
-                direction="row"
-                spacing={1}
-            >
-
-                <TextField
-                    fullWidth
-                    label="Empresa"
-                    id="empresa"
-                />
-
-                <TextField
-                    fullWidth
-                    id="tempoAtuacao"
-                    label="Tempo de atuação (Anos)"
-                    type="number"
-                />
-
-                <TextField
-                    fullWidth
-                    id="areaAtuacao"
-                    label="Área de atuação"
-                    select
-                    value={area}
-                    onChange={areaChange}
+                <Typography
+                    variant="h5"
+                    align="center"
+                    fontFamily='Oswald'
+                    fontSize='40px'
+                    color='#363636'
                 >
-                    {areas.map((option) => (
-                        <MenuItem
-                            key={option.value}
-                            value={option.value}>
-                            {option.label}
-                        </MenuItem>
-                    ))}
-                </TextField>
+                    Experiências anteriores
+                </Typography>
 
-            </Stack>
+                <Space size={60} />
 
-            <Space size={20} />
+                <Stack
+                    direction="row"
+                    spacing={1}
+                >
 
-            <Stack
-                direction="row"
-            >
+                    <TextField
+                        fullWidth
+                        label="Empresa"
+                        id="empresa"
+                    />
 
-                <TextField
+                    <TextField
+                        fullWidth
+                        id="tempoAtuacao"
+                        label="Tempo de atuação (Anos)"
+                        type="number"
+                    />
+
+                    <TextField
+                        fullWidth
+                        id="areaAtuacao"
+                        label="Área de atuação"
+                        select
+                        value={area}
+                        onChange={areaChange}
+                    >
+                        {areas.map((option) => (
+                            <MenuItem
+                                key={option.value}
+                                value={option.value}>
+                                {option.label}
+                            </MenuItem>
+                        ))}
+                    </TextField>
+
+                </Stack>
+
+                <Space size={20} />
+
+                <Stack
+                    direction="row"
+                >
+
+                    <TextField
+                        fullWidth
+                        label="Descrição"
+                        id="descricao"
+                        multiline
+                        rows={8}
+                        sx={{ Width: 200 }}
+                    />
+
+                </Stack>
+
+                <Space size={20} />
+
+                <Button
                     fullWidth
-                    label="Descrição"
-                    id="descricao"
-                    multiline
-                    rows={8}
-                    sx={{ Width: 200 }}
-                />
-
-            </Stack>
-
-            <Space size={20} />
-
-            <Button
-                fullWidth
-                type="button"
-                variant="contained"
-                style={{ backgroundColor: "#104E8B" }}
-            >
-                Registrar Experiência
-            </Button>
-
+                    type="button"
+                    variant="contained"
+                    style={{ backgroundColor: "#104E8B" }}
+                >
+                    Registrar Experiência
+                </Button>
+            </Box>
         </form >
     );
 }

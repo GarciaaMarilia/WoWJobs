@@ -8,6 +8,8 @@ import {
     Typography
 } from '@material-ui/core';
 
+import Box from '@mui/material/Box';
+
 
 import Stack from '@mui/material/Stack';
 
@@ -21,79 +23,86 @@ export default function FormularioLogin() {
 
     return (
         <form>
-            <Typography
-                variant="h5"
-                align="center"
-                fontFamily='Oswald'
-                fontSize='40px'
-                color='#363636'
-            >
-                Login
-            </Typography>
-            <Space size={80} />
-            <TextField
-                value={login}
-                onChange={(event) => {
-                    setLogin(event.target.value);
-                }}
-                id="Login"
-                label="Login"
-                variant="outlined"
-                margin="normal"
-                fullWidth
-            />
+            <Box style={{ margin: 40 }}>
 
-            <TextField
-                value={password}
-                onChange={(event) => {
-                    setPassword(event.target.value);
-                }}
-                id="Password"
-                label="Password"
-                type="password"
-                variant="outlined"
-                margin="normal"
-                fullWidth
-            />
+                <Space size={60} />
 
-            <Space size={20} />
-
-            <Stack
-                direction="row"
-                spacing={2}
-            >
-                <Button
-                    type="button"
-                    variant="contained"
-                    style={{ backgroundColor: '#104E8B' }}
-                //onClick={onSubmit}
+                <Typography
+                    variant="h5"
+                    align="center"
+                    fontFamily='Oswald'
+                    fontSize='40px'
+                    color='#363636'
                 >
-                    Entrar
-                </Button>
+                    Login
+                </Typography>
 
-                <Button
-                    type="button"
-                    variant="contained"
-                    style={{ backgroundColor: '#104E8B' }}
-                //onClick={onSubmit}
-                >
-                    Cadastre-se
-                </Button>
+                <Space size={80} />
 
-                <FormControlLabel
-                    label="Lembrar-me"
-                    control={
-                        <Switch
-                            checked={remember}
-                            onChange={(event) => {
-                                setRemember(event.target.checked);
-                            }}
-                            name="remember"
-                            style={{ color: "#104E8B" }}
-                        />
-                    }
+                <TextField
+                    value={login}
+                    onChange={(event) => {
+                        setLogin(event.target.value);
+                    }}
+                    id="Login"
+                    label="Login"
+                    variant="outlined"
+                    margin="normal"
+                    fullWidth
                 />
-            </Stack>
+
+                <TextField
+                    value={password}
+                    onChange={(event) => {
+                        setPassword(event.target.value);
+                    }}
+                    id="Password"
+                    label="Password"
+                    type="password"
+                    variant="outlined"
+                    margin="normal"
+                    fullWidth
+                />
+
+                <Space size={20} />
+
+                <Stack
+                    direction="row"
+                    spacing={2}
+                >
+                    <Button
+                        type="button"
+                        variant="contained"
+                        style={{ backgroundColor: '#104E8B' }}
+                    //onClick={onSubmit}
+                    >
+                        Entrar
+                    </Button>
+
+                    <Button
+                        type="button"
+                        variant="contained"
+                        style={{ backgroundColor: '#104E8B' }}
+                    //onClick={onSubmit}
+                    >
+                        Cadastre-se
+                    </Button>
+
+                    <FormControlLabel
+                        label="Lembrar-me"
+                        control={
+                            <Switch
+                                checked={remember}
+                                onChange={(event) => {
+                                    setRemember(event.target.checked);
+                                }}
+                                name="remember"
+                                style={{ color: "#104E8B" }}
+                            />
+                        }
+                    />
+                </Stack>
+            </Box>
 
         </form>
     )
