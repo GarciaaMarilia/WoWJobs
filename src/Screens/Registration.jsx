@@ -1,7 +1,19 @@
 import React, { useState } from 'react'
-import { TextField, Button, FormControlLabel, Radio, RadioGroup, FormLabel, FormControl, Typography } from '@material-ui/core';
 
-function Registration() {
+import {
+    FormControlLabel,
+    FormControl,
+    RadioGroup,
+    Typography,
+    TextField,
+    FormLabel,
+    Button,
+    Radio,
+} from '@material-ui/core';
+
+import Space from '../Style/space';
+
+export default function Registration() {
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -21,13 +33,16 @@ function Registration() {
             >
                 Registre-se
             </Typography>
+
+            <Space size={20} />
+
             <TextField
                 value={username}
                 onChange={(event) => {
                     setUsername(event.target.value);
                 }}
                 id="Username"
-                label="Username"
+                label="Nome"
                 required
                 variant="outlined"
                 margin="normal"
@@ -131,10 +146,12 @@ function Registration() {
                 </RadioGroup>
             </FormControl>
 
+            <Space size={20} />
+
             <Button
-                type="button"
-                variant="contained"
                 style={{ backgroundColor: "#104E8B" }}
+                variant="contained"
+                type="button"
                 fullWidth
             >
                 Registrar Cadastro
@@ -143,5 +160,3 @@ function Registration() {
         </form >
     )
 }
-
-export default Registration;

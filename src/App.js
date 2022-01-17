@@ -11,7 +11,7 @@ import Companys from "./Screens/Companys";
 
 
 function App() {
-    const [etapaAtual, setEtapaAtual] = useState(2);
+    const [etapaAtual, setEtapaAtual] = useState(4);
 
     const pages = [
         <Login send={next} />,
