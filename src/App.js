@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import Login from './Pages/Login';
-import Registration from './Pages/Registration';
-import Experience from './Pages/Experience';
-import Vacancies from './Pages/JobVacancies';
+import Login from './Screens/Login';
+import Registration from './Screens/Registration';
+import Experience from './Screens/Experience';
+import Vacancies from './Screens/JobVacancies';
 import './App.css';
 import Status from './Components/Status'
 import { Container } from '@material-ui/core';
 import Space from '././Style/space'
-import Companys from "./Pages/Companys.jsx";
+import Companys from "./Screens/Companys";
 
 
 function App() {
