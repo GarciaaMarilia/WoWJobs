@@ -1,17 +1,20 @@
 import React, { useState } from "react";
-import Login from './Screens/Login';
-import Registration from './Screens/Registration';
-import Experience from './Screens/Experience';
-import Vacancies from './Screens/JobVacancies';
-import './App.css';
-import Status from './Components/Status'
+
 import { Container } from '@material-ui/core';
+
+import Status from './Components/Status'
 import Space from '././Style/space'
+import './App.css';
+
+import Registration from './Screens/Registration';
+import Vacancies from './Screens/JobVacancies';
+import Experience from './Screens/Experience';
 import Companys from "./Screens/Companys";
+import Login from './Screens/Login';
 
+export default function App() {
 
-function App() {
-    const [etapaAtual, setEtapaAtual] = useState(4);
+    const [etapaAtual, setEtapaAtual] = useState(0);
 
     const pages = [
         <Login send={next} />,
@@ -24,9 +27,11 @@ function App() {
     function next() {
         setEtapaAtual(etapaAtual + 1);
     }
+
     function send(dados) {
         console.log(dados)
     }
+
     return (
         <React.Fragment>
             <Status />,
@@ -37,5 +42,3 @@ function App() {
         </React.Fragment>
     )
 }
-
-export default App;

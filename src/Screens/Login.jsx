@@ -1,10 +1,20 @@
 import React, { useState } from "react";
-import { TextField, Button, Switch, FormControlLabel, Typography } from '@material-ui/core';
+
+import {
+    TextField,
+    Button,
+    Switch,
+    FormControlLabel,
+    Typography
+} from '@material-ui/core';
+
+
 import Stack from '@mui/material/Stack';
+
 import Space from "../Style/space";
 
 
-function FormularioLogin() {
+export default function FormularioLogin() {
     const [login, setLogin] = useState("");
     const [password, setPassword] = useState("");
     const [remember, setRemember] = useState(true);
@@ -28,7 +38,6 @@ function FormularioLogin() {
                 }}
                 id="Login"
                 label="Login"
-                required
                 variant="outlined"
                 margin="normal"
                 fullWidth
@@ -42,12 +51,13 @@ function FormularioLogin() {
                 id="Password"
                 label="Password"
                 type="password"
-                required
                 variant="outlined"
                 margin="normal"
                 fullWidth
             />
+
             <Space size={20} />
+
             <Stack
                 direction="row"
                 spacing={2}
@@ -55,7 +65,7 @@ function FormularioLogin() {
                 <Button
                     type="button"
                     variant="contained"
-                    style={{ backgroundColor: "#104E8B" }}
+                    style={{ backgroundColor: '#104E8B' }}
                 //onClick={onSubmit}
                 >
                     Entrar
@@ -64,7 +74,7 @@ function FormularioLogin() {
                 <Button
                     type="button"
                     variant="contained"
-                    style={{ backgroundColor: "#104E8B" }}
+                    style={{ backgroundColor: '#104E8B' }}
                 //onClick={onSubmit}
                 >
                     Cadastre-se
@@ -88,5 +98,3 @@ function FormularioLogin() {
         </form>
     )
 }
-
-export default FormularioLogin;
