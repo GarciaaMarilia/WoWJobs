@@ -10,7 +10,7 @@ import Space from '../Style/space';
 export default function Vacancies() {
     return (
         <React.Fragment>
-            <Box style={{ margin: 40 }}>
+            <Box style={{ margin: 50 }}>
 
                 <Space size={60} />
 

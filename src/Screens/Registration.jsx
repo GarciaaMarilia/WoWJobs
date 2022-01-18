@@ -11,6 +11,9 @@ import {
     Radio,
     Box
 } from '@material-ui/core';
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import LockIcon from '@mui/icons-material/Lock';
 
 import Space from '../Style/space';
 
@@ -24,7 +27,7 @@ export default function Registration() {
 
     return (
         <form>
-            <Box style={{ margin: 40 }}>
+            <Box style={{ margin: 50 }}>
 
                 <Space size={60} />
 
@@ -39,15 +42,20 @@ export default function Registration() {
                     Registre-se
                 </Typography>
 
-                <Space size={20} />
+                <Space size={60} />
 
                 <TextField
                     value={username}
                     onChange={(event) => {
                         setUsername(event.target.value);
                     }}
-                    id="Username"
-                    label="Nome"
+                    id="username"
+                    label={
+                        <>
+                            <AccountCircleIcon style={{ paddingRight: "6px" }} />
+                            Nome
+                        </>
+                    }
                     required
                     variant="outlined"
                     margin="normal"
@@ -60,7 +68,12 @@ export default function Registration() {
                         setEmail(event.target.value);
                     }}
                     id="email"
-                    label="Email"
+                    label={
+                        <>
+                            <AlternateEmailIcon style={{ paddingRight: "6px" }} />
+                            E-mail
+                        </>
+                    }
                     required
                     variant="outlined"
                     margin="normal"
@@ -73,7 +86,12 @@ export default function Registration() {
                         setConemail(event.target.value);
                     }}
                     id="conEmail"
-                    label="Confirme e-mail"
+                    label={
+                        <>
+                            <AlternateEmailIcon style={{ paddingRight: "6px" }} />
+                            Confirme e-mail
+                        </>
+                    }
                     required
                     variant="outlined"
                     margin="normal"
@@ -87,7 +105,12 @@ export default function Registration() {
                     }}
                     type="password"
                     id="Password"
-                    label="Senha"
+                    label={
+                        <>
+                            <LockIcon style={{ paddingRight: "6px" }} />
+                            Senha
+                        </>
+                    }
                     required
                     variant="outlined"
                     margin="normal"
@@ -101,7 +124,12 @@ export default function Registration() {
                     }}
                     type="password"
                     id="conPassword"
-                    label="Confirme senha"
+                    label={
+                        <>
+                            <LockIcon style={{ paddingRight: "6px" }} />
+                            Confirme senha
+                        </>
+                    }
                     required
                     variant="outlined"
                     margin="normal"

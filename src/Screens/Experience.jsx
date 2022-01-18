@@ -7,6 +7,11 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 
+import BusinessIcon from '@mui/icons-material/Business';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import BadgeIcon from '@mui/icons-material/Badge';
+import DescriptionIcon from '@mui/icons-material/Description';
+
 import Space from '../Style/space';
 
 function Experience() {
@@ -49,7 +54,7 @@ function Experience() {
 
     return (
         <form>
-            <Box style={{ margin: 40 }}>
+            <Box style={{ margin: 50 }}>
 
                 <Space size={60} />
 
@@ -72,21 +77,36 @@ function Experience() {
 
                     <TextField
                         fullWidth
-                        label="Empresa"
+                        label={
+                            <>
+                                <BusinessIcon style={{ paddingRight: "6px" }} />
+                                Empresa
+                            </>
+                        }
                         id="empresa"
                     />
 
                     <TextField
                         fullWidth
                         id="tempoAtuacao"
-                        label="Tempo de atuação (Anos)"
+                        label={
+                            <>
+                                <AccessTimeIcon style={{ paddingRight: "6px" }} />
+                                Tempo de Atuação (Anos)
+                            </>
+                        }
                         type="number"
                     />
 
                     <TextField
                         fullWidth
                         id="areaAtuacao"
-                        label="Área de atuação"
+                        label={
+                            <>
+                                <BadgeIcon style={{ paddingRight: "6px" }} />
+                                Área de Atuação
+                            </>
+                        }
                         select
                         value={area}
                         onChange={areaChange}
@@ -110,7 +130,12 @@ function Experience() {
 
                     <TextField
                         fullWidth
-                        label="Descrição"
+                        label={
+                            <>
+                                <DescriptionIcon style={{ paddingRight: "6px" }} />
+                                Descrição
+                            </>
+                        }
                         id="descricao"
                         multiline
                         rows={8}

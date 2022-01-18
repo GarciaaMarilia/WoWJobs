@@ -7,11 +7,11 @@ import {
     FormControlLabel,
     Typography
 } from '@material-ui/core';
-
-import Box from '@mui/material/Box';
-
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import LockIcon from '@mui/icons-material/Lock';
 
 import Stack from '@mui/material/Stack';
+import Box from '@mui/material/Box';
 
 import Space from "../Style/space";
 
@@ -19,11 +19,12 @@ import Space from "../Style/space";
 export default function FormularioLogin() {
     const [login, setLogin] = useState("");
     const [password, setPassword] = useState("");
-    const [remember, setRemember] = useState(true);
+    const [remember, setRemember] = useState(false);
+
 
     return (
         <form>
-            <Box style={{ margin: 40 }}>
+            <Box style={{ margin: 50 }}>
 
                 <Space size={60} />
 
@@ -34,18 +35,23 @@ export default function FormularioLogin() {
                     fontSize='40px'
                     color='#363636'
                 >
-                    Login
+                    Entrar
                 </Typography>
 
-                <Space size={80} />
+                <Space size={60} />
 
                 <TextField
                     value={login}
                     onChange={(event) => {
                         setLogin(event.target.value);
                     }}
-                    id="Login"
-                    label="Login"
+                    id="login"
+                    label={
+                        <>
+                            <AccountCircleIcon style={{ paddingRight: "6px" }} />
+                            Usuário
+                        </>
+                    }
                     variant="outlined"
                     margin="normal"
                     fullWidth
@@ -56,8 +62,13 @@ export default function FormularioLogin() {
                     onChange={(event) => {
                         setPassword(event.target.value);
                     }}
-                    id="Password"
-                    label="Password"
+                    id="password"
+                    label={
+                        <>
+                            <LockIcon style={{ paddingRight: "6px" }} />
+                            Senha
+                        </>
+                    }
                     type="password"
                     variant="outlined"
                     margin="normal"
