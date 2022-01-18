@@ -19,7 +19,7 @@ export default function Profile() {
                 fontSize='40px'
                 color='#363636'
             >
-                Profile
+                Perfil
             </Typography>
         </Box>
     )
